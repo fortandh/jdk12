@@ -6,5 +6,17 @@ If I just ignore them, I could compiled them quickly. But I don't do so, and I k
 
 Now, I have finished it. I know, others would think it's a small step for them, but for me, it's a big step.
 
-## For User
-It could be compiled without warnings or errors in the environment which is linux with gcc 9.3.0, if you want to do so with windows or macOS, there is my [note](https://github.com/fortandh/ShogunNotes/blob/master/JDK%E7%BC%96%E8%AF%91%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.md) for reference.
+## Q&A
+### Requirements
+* System: Ubuntu 18.04 LTS
+* Make: GNU Make 4.1
+* Gcc: 7.5.0
+* G++: 7.5.0
+
+### Stop at vm_version_x86.cpp:565 while debugging
+![get_cpu_info_stub_problem.png](img%2Fget_cpu_info_stub_problem.png)
+
+**Using continue in gdb to pass this segment fault.**
+![get_cpu_info_stub_solution.png](img%2Fget_cpu_info_stub_solution.png)
+
+Reference: https://bugzilla.redhat.com/show_bug.cgi?id=1572811
